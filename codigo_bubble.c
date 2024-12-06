@@ -36,24 +36,23 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Preenche o array com números aleatórios
+  
     srand(time(NULL));
     for (int i = 0; i < tam; i++) {
-        list[i] = rand() % 10000000 + 1;
+        list[i] = rand() % 99 + 1;
     }
 
-    // Calcula o tempo de execução
+    
     clock_t start = clock();
     bubble_sort(list, tam);
     clock_t end = clock();
 
-    // Calcula o tempo total de execução
+    
     double tempo_execucao = (double)(end - start) / CLOCKS_PER_SEC;
 
-    // Exibe o tempo de execução
     printf("%.6f\n", tempo_execucao);
 
-    // Libera a memória alocada
+ 
     free(list);
 
     return 0;

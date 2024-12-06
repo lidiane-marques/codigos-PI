@@ -65,12 +65,12 @@ int main(int argc, char *argv[]) {
 
     srand(time(NULL));
     for (int i = 0; i < tam; i++) {
-        list[i] = rand() % 10000000 + 1;
+        list[i] = rand() % tam ;
     }
 
     // Calcula o tempo de execução
     clock_t start = clock();
-    merge_sort(list, 0, tam - 1); 
+    merge_sort(list, 0, tam -1 ); 
     clock_t end = clock();
 
 
